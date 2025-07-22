@@ -59,3 +59,54 @@ Instead of `pip + venv`, this project uses **`uv`** for:
 ---
 
 ## **📂 Project Structure**
+HELLA-AI-ASSISTANT/
+│
+├── ai_agent.py              # LangGraph ReAct agent setup with Gemini & Vision tools
+├── tools.py                  # Webcam capture + Vision Q&A (LLaMA-4 Maverick)
+├── speech_to_text.py         # Whisper-based STT using Groq API
+├── text_to_speech.py         # ElevenLabs API for TTS
+├── main.py                   # Gradio UI and continuous interaction loop
+├── .env                      # API keys (not shared publicly)
+├── pyproject.toml            # Project config
+├── uv.lock                   # Lockfile for reproducibility
+
+---
+
+## **🔑 API Keys (Add to `.env` file)**
+GROQ_API_KEY=your_groq_api_key
+GOOGLE_API_KEY=your_google_api_key
+ELEVENLABS_API_KEY=your_elevenlabs_api_key
+
+
+---
+
+## **🖥️ Run Locally**
+
+1️⃣ Install [uv](https://github.com/astral-sh/uv)
+
+```bash
+curl -Ls https://astral.sh/uv/install.sh | sh
+
+python main.py
+
+
+📸 Example Use Cases
+	•	Ask general knowledge questions
+	•	Ask visual queries (e.g., “Do I have a phone in my hand?”)
+	•	Smart home conversational agent
+	•	Multimodal AI demos
+
+
+
+
+---
+
+### **Next Step:**
+
+- Copy this into your repo’s `README.md`  
+- Commit & push:
+
+```bash
+git add README.md
+git commit -m "Added professional README"
+git push
